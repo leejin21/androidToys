@@ -20,10 +20,10 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <TextView
-        android:id="@+id/rv_content"
+        app:layout_constraintLeft_toRightOf="@+id/rv_img"
+        android:id="@+id/rv_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toRightOf="@+id/rv_img"
         app:layout_constraintTop_toTopOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

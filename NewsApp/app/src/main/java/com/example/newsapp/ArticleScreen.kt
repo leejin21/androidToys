@@ -1,15 +1,18 @@
 package com.example.newsapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TableLayout
+import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,15 +21,14 @@ private const val ARG_PARAM2 = "param2"
  */
 class ArticleScreen : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
@@ -34,26 +36,38 @@ class ArticleScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_article_screen, container, false)
+        val view:View = inflater.inflate(R.layout.fragment_article_screen, container, false)
+        viewPager = view.findViewById(R.id.pager)
+        tabLayout = view.findViewById(R.id.tab_layout)
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ArticleScreen.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ArticleScreen().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
+        val pagerAdapter = PagerFragmentStateAdapter(requireActivity())
+        // 6개의 fragment add
+        pagerAdapter.addFragment(BusinessFragment())
+        pagerAdapter.addFragment(EntertainmentFragment())
+        pagerAdapter.addFragment(HealthFragment())
+        pagerAdapter.addFragment(ScienceFragment())
+        pagerAdapter.addFragment(SportsFragment())
+        pagerAdapter.addFragment(TechnologyFragment())
+
+        // adapter
+        viewPager.adapter = pagerAdapter
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int){
+                    super.onPageSelected(position)
+                    Log.e("ViewPagerFragment", "Page ${position+1}")
                 }
-            }
+        })
+
+        // tablayout attach
+        TabLayoutMediator(tabLayout, viewPager){ tab, position ->
+            tab.text = "Tab ${position+1}"
+        }.attach()
     }
+
 }

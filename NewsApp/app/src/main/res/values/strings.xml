@@ -9,6 +9,14 @@
     <string name="settings_screen">THIS IS SETTINGS SCREEN</string>
     <string name="scrap_screen">THIS IS SCRAP SCREEN</string>
     <string name="more">MORE</string>
+    <string name="health_frag">헬스 뉴스</string>
+    <string name="science_frag">과학 뉴스</string>
+    <string name="enter_frag">연예 뉴스</string>
+    <string name="sports_frag">스포츠 뉴스</string>
+    <string name="tech_frag">테크 뉴스</string>
+    <string name="busi_frag">경제 뉴스</string>
+
+
     <string name="scroll_text">안녕하세요 제 이름은 이진이구여 6/28은 투피엠 컴백일입니다 많은 관심 부탁드리구여
         또 제 성적이 나오는 날인데여
         교수님들 왜 이렇게 성적을 안 내주시는지 정말 모르겠어요
