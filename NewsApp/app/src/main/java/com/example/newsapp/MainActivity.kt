@@ -12,6 +12,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     lateinit var bottomNavigationView: BottomNavigationView
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -22,6 +25,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         bottomNavigationView = findViewById(R.id.bottomNavBar)
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
+
+        
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean{
