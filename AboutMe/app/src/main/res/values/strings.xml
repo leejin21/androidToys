@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AboutMe</string>
+    <string name="name">JIN LEE</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">Hi, my name is Jin Lee. \n
+        I like watching dramas, read novels, and play games. \n
+        These days I usually play Genshin Impact which is made by Mihoyo. \n
+        I actually play for all day, so I try to play GenShin less than 3 hours a day. \n
+        Yesterday I had a coding test in my house with my computer, and I found out that my friends were actually having the test too.
+        if you do not already have the AboutMe app from a previous codelab, download the starter code, AboutMeInteractive-Starter. This the same code you finished in a previous codelab.
+        Open the AboutMeInteractive-Starter project in Android Studio. \n
+        Run the app. You see a name text view, a star image, and a long segment of text in a scroll view. \n</string>
+    <string name="what_is_your_nickname">What is your Nickname? </string>
+    <string name="done">Done</string>
+</resources>

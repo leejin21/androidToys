@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="menu_read">ARTICLES</string>
+    <string name="menu_scrap">SCRAPS</string>
+    <string name="menu_settings">SETTING</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="article_screen">THIS IS ARTICLE SCREEN</string>
+    <string name="settings_screen">THIS IS SETTINGS SCREEN</string>
+    <string name="scrap_screen">THIS IS SCRAP SCREEN</string>
+    <string name="more">MORE</string>
+    <string name="scroll_text">안녕하세요 제 이름은 이진이구여 6/28은 투피엠 컴백일입니다 많은 관심 부탁드리구여
+        또 제 성적이 나오는 날인데여
+        교수님들 왜 이렇게 성적을 안 내주시는지 정말 모르겠어요
+        하 얼른 성적 나왔으면 좋겠다
+        약간 매 일찍 맞는 기분
+        취업 얼른 하고 싶다
+        오늘은 언니가 고기 사준다고 그래서 되게 기대중입니다
+        그리고 내년이면 엄마아빠 결혼기념일 30주년
+        은혼식이라고 하네요.
+    정렬
+
+보기의 가장자리를 다른 보기의 가장자리에 맞게 정렬합니다.
+
+그림 9에서 B의 왼쪽은 A의 왼쪽에 맞게 정렬됩니다. 보기 중심을 정렬하려면 양쪽에 제약조건을 만듭니다.
+
+제약조건에서 안쪽으로 보기를 드래그하여 기준에서 벗어나 정렬할 수 있습니다. 예를 들어 그림 10에서는 24dp 벗어나 정렬된 B를 보여줍니다. 이와 같은 오프셋은 제한된 보기의 여백으로 정의됩니다.
+
+정렬할 보기를 모두 선택한 후 툴바에서 Align 을 클릭하여 정렬 유형을 선택할 수도 있습니다.
+
+
+그림 9. 가로 정렬 제약조건
+
+
+그림 10. 오프셋 가로 정렬 제약조건</string>
+</resources>
